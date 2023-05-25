@@ -8,23 +8,23 @@
  *
  *@delimiter: used to split the string
  *@str: the string to be split
- *@wordcount: the number of words
+ *@wordCount: the number of words
  *
  * Return: an array of split words
  */
 
-char** splitString(const char* str, const char* delimiter, int* wordCount)
+char **splitString(const char *str, const char *delimiter, int *wordCount)
 {
-	char* strCopy = strdup(str);
+	char *strCopy = strdup(str);
 
-	char** words = NULL;
-	char* token = strtok(strCopy, delimiter);
+	char **words = NULL;
+	char *token = strtok(strCopy, delimiter);
 	int count = 0;
 
 	while (token != NULL)
 	{
 		count++;
-		words = realloc(words, count * sizeof(char*));
+		words = realloc(words, count * sizeof(char *));
 		words[count - 1] = strdup(token);
 		token = strtok(NULL, delimiter);
 	}
@@ -32,5 +32,5 @@ char** splitString(const char* str, const char* delimiter, int* wordCount)
 	free(strCopy);
 
 	*wordCount = count;
-	return words;
+	return (words);
 }

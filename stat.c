@@ -6,6 +6,9 @@
 /**
  * main - stat example
  *
+ *@ac: description of ac
+ *@av: description of av
+ *
  * Return: Always 0.
  */
 int main(int ac, char **av)
